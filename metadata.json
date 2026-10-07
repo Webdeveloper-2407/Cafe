@@ -1,0 +1,6 @@
+{
+  "name": "Café — Good Coffee & More",
+  "description": "Artisan café website featuring handcrafted coffee, fresh pastries, online ordering, table reservations, blog, gallery, and admin management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
