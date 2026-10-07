@@ -3,7 +3,7 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { apiRouter } from './backend/routes/api.js';
-import { PORT } from './backend/config/constants.js';
+import { PORT, MONGODB_URI, JWT_SECRET } from './backend/config/constants.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -52,6 +52,8 @@ async function startServer() {
 
   app.listen(PORT, '0.0.0.0', () => {
     console.log(`[Server] Café Full-Stack server running at http://localhost:${PORT}`);
+    console.log(`[Server] Environment: MONGODB_URI=${MONGODB_URI ? 'Connected/Configured' : 'Using persistent document store (.data/db.json)'}`);
+    console.log(`[Server] Environment: JWT_SECRET=${JWT_SECRET ? 'Configured' : 'Default'}`);
   });
 }
 
