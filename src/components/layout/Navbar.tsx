@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ShoppingBag, Menu as MenuIcon, X, Calendar } from 'lucide-react';
+import { CafeLeafIcon } from '../common/CafeLeafIcon.js';
 import { useCart } from '../../context/CartContext.js';
 
 interface NavbarProps {
@@ -32,13 +33,16 @@ export function Navbar({ currentView, onNavigate, onOpenReservation }: NavbarPro
         {/* Left: Brand Logo */}
         <button
           onClick={() => onNavigate('home')}
-          className="text-left group focus:outline-none"
+          className="text-left group focus:outline-none flex items-center gap-2.5 cursor-pointer"
         >
+          <div className="w-9 h-9 rounded-full bg-[#EFE4D8] border border-[#DFCFC0] flex items-center justify-center text-[#6B4226] group-hover:bg-[#E8D9C9] transition-colors shrink-0">
+            <CafeLeafIcon className="w-5 h-5 text-[#6B4226]" />
+          </div>
           <div className="flex flex-col items-start leading-none">
-            <span className="font-serif text-3xl font-bold tracking-tight text-[#2B1810] group-hover:text-[#6B4226] transition-colors">
+            <span className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-[#2B1810] group-hover:text-[#6B4226] transition-colors">
               CAFÉ
             </span>
-            <span className="text-[10px] font-medium tracking-[0.22em] text-[#7A5034] mt-1 uppercase">
+            <span className="text-[9px] sm:text-[10px] font-medium tracking-[0.24em] text-[#7A5034] mt-0.5 uppercase">
               Coffee & More
             </span>
           </div>

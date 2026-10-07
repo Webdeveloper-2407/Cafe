@@ -1,14 +1,21 @@
 export interface MenuItem {
   id: string;
   name: string;
+  slug?: string;
   description: string;
+  fullDescription?: string;
   price: number;
   image: string;
   category: string;
   available: boolean;
   featured: boolean;
+  ingredients?: string[];
+  allergens?: string[];
+  preparationTime?: string;
+  calories?: number;
   tags?: string[];
   createdAt: string;
+  updatedAt?: string;
 }
 
 export interface Category {
@@ -31,7 +38,7 @@ export interface CartItem {
 
 export interface Order {
   id: string;
-  orderNumber: string;
+  orderNumber: string; // e.g. CAF-2026-0001
   customerName: string;
   email: string;
   phone: string;
@@ -48,8 +55,9 @@ export interface Order {
   tax: number;
   deliveryFee: number;
   total: number;
-  status: 'Pending' | 'Confirmed' | 'Preparing' | 'Ready' | 'Completed' | 'Cancelled';
+  status: 'Pending' | 'Confirmed' | 'Preparing' | 'Ready' | 'Out for Delivery' | 'Completed' | 'Cancelled';
   notes?: string;
+  estimatedTime?: string;
   createdAt: string;
 }
 

@@ -17,6 +17,9 @@ async function startServer() {
   // Mount API router
   app.use('/api', apiRouter);
 
+  // Serve static assets from public directory
+  app.use(express.static(path.resolve(__dirname, 'public')));
+
   // Setup Vite middleware in dev or static files in production
   const isProd = process.env.NODE_ENV === 'production';
 

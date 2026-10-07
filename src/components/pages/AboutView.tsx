@@ -1,7 +1,5 @@
 import React from 'react';
 import { CafeLeafIcon } from '../common/CafeLeafIcon.js';
-import baristaPourImage from '../../assets/images/cafe_barista_latte_pour_1791337603225.jpg';
-import coffeeImage from '../../assets/images/cafe_feature_coffee_1791337560176.jpg';
 
 interface AboutViewProps {
   onExploreMenu: () => void;
@@ -33,9 +31,12 @@ export function AboutView({ onExploreMenu, onBookTable }: AboutViewProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg border border-[#E3D6C5]">
             <img
-              src={baristaPourImage}
+              src="/images/barista.jpg"
               alt="Artisan barista crafting coffee"
               className="w-full h-full object-cover"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = '/images/coffee.jpg';
+              }}
             />
           </div>
 

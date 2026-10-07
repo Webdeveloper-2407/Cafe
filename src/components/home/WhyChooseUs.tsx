@@ -1,7 +1,5 @@
 import React from 'react';
 import { CafeLeafIcon } from '../common/CafeLeafIcon.js';
-import coffeeImage from '../../assets/images/cafe_feature_coffee_1791337560176.jpg';
-import cheesecakeImage from '../../assets/images/cafe_feature_cheesecake_1791337576939.jpg';
 
 interface WhyChooseUsProps {
   onLearnMore: (topic: string) => void;
@@ -11,14 +9,14 @@ export function WhyChooseUs({ onLearnMore }: WhyChooseUsProps) {
   const cards = [
     {
       id: 'coffee',
-      image: coffeeImage,
+      image: '/images/coffee.jpg',
       alt: 'Artisan brewed cappuccino',
       title: 'Quality Coffee',
       description: 'We source the finest beans and brew every cup to perfection.',
     },
     {
       id: 'food',
-      image: cheesecakeImage,
+      image: '/images/cheesecake.jpg',
       alt: 'Freshly baked berry cheesecake',
       title: 'Fresh & Delicious',
       description: 'From pastries to meals, everything is made fresh daily.',

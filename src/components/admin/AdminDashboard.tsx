@@ -62,7 +62,7 @@ export function AdminDashboard({ user, onLogout, onBackToSite }: AdminDashboardP
     description: '',
     price: 3.50,
     category: 'Coffee & Espresso',
-    image: '/src/assets/images/cafe_feature_coffee_1791337560176.jpg',
+    image: '/images/coffee.jpg',
     featured: false,
     available: true,
   });
@@ -128,7 +128,7 @@ export function AdminDashboard({ user, onLogout, onBackToSite }: AdminDashboardP
         description: '',
         price: 3.50,
         category: 'Coffee & Espresso',
-        image: '/src/assets/images/cafe_feature_coffee_1791337560176.jpg',
+        image: '/images/coffee.jpg',
         featured: false,
         available: true,
       });

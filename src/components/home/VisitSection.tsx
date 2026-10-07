@@ -1,6 +1,5 @@
 import React from 'react';
 import { CafeLeafIcon } from '../common/CafeLeafIcon.js';
-import baristaPourImage from '../../assets/images/cafe_barista_latte_pour_1791337603225.jpg';
 
 interface VisitSectionProps {
   onFindLocation: () => void;
@@ -46,16 +45,22 @@ export function VisitSection({ onFindLocation }: VisitSectionProps) {
                   alt="Charming café exterior storefront"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/images/hero.jpg';
+                  }}
                 />
               </div>
 
               {/* Image 2: Barista Milk Pouring Craft */}
               <div className="aspect-[3/4.6] rounded-xl overflow-hidden shadow-sm border border-[#E8DDCE] bg-[#F2E7DC] group">
                 <img
-                  src={baristaPourImage}
+                  src="/images/barista.jpg"
                   alt="Barista pouring delicate latte art"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/images/coffee.jpg';
+                  }}
                 />
               </div>
 
@@ -66,6 +71,9 @@ export function VisitSection({ onFindLocation }: VisitSectionProps) {
                   alt="Cozy warm café wooden tables"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/images/hero.jpg';
+                  }}
                 />
               </div>
             </div>
